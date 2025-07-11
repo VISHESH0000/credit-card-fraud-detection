@@ -10,7 +10,7 @@ def evaluate_model():
     X_train, X_test, y_train, y_test = split_data(X_scaled, y)
 
     # Load model
-    with open("models/model.pkl", "rb") as f:
+    with open("models/model.joblib", "rb") as f:
         model = joblib.load(f)
 
     # Predict and evaluate

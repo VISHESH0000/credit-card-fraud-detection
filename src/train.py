@@ -13,11 +13,11 @@ def train_model():
     model.fit(X_train, y_train)
 
     # Save model
-    with open("models/model.pkl", "wb") as f:
+    with open("models/model.joblib", "wb") as f:
         joblib.dump(model, f, compress=3)
 
     # Save scaler
-    with open("models/scaler.pkl", "wb") as f:
+    with open("models/scaler.joblib", "wb") as f:
         joblib.dump(scaler, f, compress=3)
 
     print("✅ Model and scaler saved successfully ")
